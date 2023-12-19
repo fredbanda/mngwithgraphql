@@ -14,8 +14,10 @@ export default function Register() {
 
         try{
             await axios.post('http://locaalhost:5000/signup', {
+                name,
                 email,
-                password
+                password,
+                passwordConfirmation,
             })
         }catch(e){
             console.log(e)
